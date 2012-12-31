@@ -9,6 +9,9 @@ Stable tag: 0.0.2
 PinterestのボードをWordPressに表示しよう！
 
 == Description ==
+簡単なショートコードを書くだけで、貴方の投稿にPinterestのボードを表示させます。
+
+Just write a simple short code, to display the Pinterest-board to your posts.
 
 == Installation ==
 
