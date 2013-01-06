@@ -38,7 +38,7 @@ class GetPinterestFeed{
 			$link = $item->get_link();
 			$descri = $item->get_description();
 			
-			preg_match('/<img src="(.+)">/',$descri,$mache);
+			preg_match('/img\ssrc="(.+)"/',$descri,$mache);
 			$extImgUrlArray[] = array($mache[1],$link);
 		}
 		return($extImgUrlArray);
