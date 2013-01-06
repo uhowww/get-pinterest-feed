@@ -2,7 +2,7 @@
 /*
 Plugin Name: Get Pinterest Feed
 Description: PinterestのボードをWordPressに表示しよう！
-Version: 0.0.2
+Version: 0.0.3
 Author: Takumin
 Author URI: http://takumin.ddo.jp
 License: GPLv2
