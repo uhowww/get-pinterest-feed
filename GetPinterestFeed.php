@@ -2,7 +2,7 @@
 /*
 Plugin Name: Get Pinterest Feed
 Description: PinterestのボードをWordPressに表示しよう！
-Version: 0.0.2
+Version: 0.0.3
 Author: Takumin
 Author URI: http://takumin.ddo.jp
 License: GPLv2
@@ -38,7 +38,7 @@ class GetPinterestFeed{
 			$link = $item->get_link();
 			$descri = $item->get_description();
 			
-			preg_match('/<img src="(.+)">/',$descri,$mache);
+			preg_match('/<img\ssrc="(.+)">/',$descri,$mache);
 			$extImgUrlArray[] = array($mache[1],$link);
 		}
 		return($extImgUrlArray);
