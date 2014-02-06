@@ -135,7 +135,7 @@ EOS;
 	
 	public function check_cache($feeds){
 		if(is_writable(WP_CONTENT_DIR)){
-			if(!is_dir(WP_CONTENT_DIR.'/cache/get-pinteresr-feed')){
+			if(!is_dir(WP_CONTENT_DIR.'/cache/get-pinterest-feed')){
 				$old = umask(0);
 				
 				if(!is_dir(WP_CONTENT_DIR.'/cache')){
@@ -145,18 +145,18 @@ EOS;
 				}
 				
 				if($flag)
-					$flag = @mkdir(WP_CONTENT_DIR.'/cache/get-pinteresr-feed',0755);
+					$flag = @mkdir(WP_CONTENT_DIR.'/cache/get-pinterest-feed',0755);
 				
 				if($flag){
-						$feeds->set_cache_location(WP_CONTENT_DIR.'/cache/get-pinteresr-feed');
+						$feeds->set_cache_location(WP_CONTENT_DIR.'/cache/get-pinterest-feed');
 				}else{ //キャッシュディレクトリを作れなかった。。
 					$feeds->enable_cache(false);
 				}
 				
 				umask($old);
 				
-			}else if(is_writable(WP_CONTENT_DIR.'/cache/get-pinteresr-feed')){
-				$feeds->set_cache_location(WP_CONTENT_DIR.'/cache/get-pinteresr-feed');
+			}else if(is_writable(WP_CONTENT_DIR.'/cache/get-pinterest-feed')){
+				$feeds->set_cache_location(WP_CONTENT_DIR.'/cache/get-pinterest-feed');
 				$feeds->enable_cache(true);
 			}else{ //何故かajax_feedのキャッシュディレクトリが書き込めないのでキャッシュを諦める
 				$feeds->enable_cache(false);
